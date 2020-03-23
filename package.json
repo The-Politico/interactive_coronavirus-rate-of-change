@@ -1,0 +1,47 @@
+{
+  "name": "interactive_interactive_coronavirus-rate-of-change",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "pib": {
+    "template": "dynamic",
+    "id": "QT8xWcsx",
+    "pageName": "interactive_coronavirus-rate-of-change",
+    "siteSection": "politics",
+    "pageType": "interactives",
+    "adUnitSection": "politics",
+    "freePaidContent": "free",
+    "opinion": false,
+    "site": "core",
+    "publishPath": "interactives/2020/interactive_coronavirus-rate-of-change/",
+    "published": null,
+    "updated": null,
+    "authors": [
+      {
+        "link": "https://www.politico.com/",
+        "name": "Polly Politico"
+      }
+    ]
+  },
+  "dependencies": {
+    "politico-style": "3.0.16",
+    "@politico/interactive-style": "1.6.1",
+    "react-markdown": "4.1.0",
+    "react": "16.6.3",
+    "react-helmet": "5.2.1"
+  },
+  "devDependencies": {
+    "@politico/interactive-bin": "0.1.14",
+    "@politico/eslint-config-interactives": "latest",
+    "eslint": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pib start",
+    "build": "pib build",
+    "preview": "pib preview",
+    "api": "pib api",
+    "pub": "pib publish",
+    "new": "pib new"
+  }
+}
