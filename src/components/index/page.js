@@ -1,52 +1,38 @@
 import React from 'react';
 
 /* import components */
-import {
-  Ad,
-  Container,
-  Dek,
-  Footer,
-  Head,
-  Headline,
-  Info,
-  Navigation,
-  Section,
-  Share,
-  SkipNav,
-  SkipToMainContent
-} from '@politico/interactive-style';
+import { Ad, Comments, Container, Dek, Footer, Head, Headline, Info, Navigation, Section, Share } from '@politico/interactive-style';
 
 /* import content */
 import { pib as meta } from 'package.json';
 import content from 'Content';
-import Copy from 'Content/copy.md';
 
 /* import styles */
 import 'Theme/base.scss';
 
-const Page = (props) => {
-  return (
-    <div className='story'>
-      <Head {...content.meta} />
-      <SkipNav />
-      <Navigation />
-      <Ad.Dynamic type='leaderboard' />
-      <Share subject={meta.pageName} tweet={meta.pageName} />
-      <Section href={content.section.link}>{content.section.name}</Section>
-      <Headline>{content.headline}</Headline>
-      <Dek>{content.dek}</Dek>
-      <Info {...meta} />
+class Page extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
-      <SkipToMainContent />
-      <Container>
-        <Copy />
-        <Ad.Dynamic />
-        <Copy />
-      </Container>
-      <Footer />
-    </div>
-  );
-};
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className='story'>
+
+        <Head {...content.meta} />
+        <Navigation />
+        <Ad.Banner />
+        <Container>
+          <div id='story' />
+          <Comments publishPath={meta.publishPath} />
+        </Container>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 export default Page;
 

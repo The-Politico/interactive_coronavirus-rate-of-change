@@ -24,15 +24,18 @@
     ]
   },
   "dependencies": {
-    "politico-style": "3.0.16",
+    "@politico/graphics-kit": "^1.0.3",
     "@politico/interactive-style": "1.6.1",
-    "react-markdown": "4.1.0",
+    "d3": "^5.15.0",
+    "politico-style": "3.0.16",
     "react": "16.6.3",
-    "react-helmet": "5.2.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "5.2.1",
+    "react-markdown": "4.1.0"
   },
   "devDependencies": {
-    "@politico/interactive-bin": "0.1.14",
     "@politico/eslint-config-interactives": "latest",
+    "@politico/interactive-bin": "0.1.14",
     "eslint": "latest"
   },
   "scripts": {
