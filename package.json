@@ -28,8 +28,8 @@
     "@politico/interactive-style": "1.6.1",
     "d3": "^5.15.0",
     "politico-style": "3.0.16",
-    "react": "16.6.3",
-    "react-dom": "^16.13.1",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
     "react-helmet": "5.2.1",
     "react-markdown": "4.1.0"
   },

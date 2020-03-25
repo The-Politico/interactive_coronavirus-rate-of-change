@@ -10,9 +10,6 @@ class BarContent extends React.Component {
           className='bar'
           style={{ animationDuration: `${sec}s`}}
         />
-        <p className='note'>
-          One person tests positive every <b>{Math.round(sec)}</b> seconds.
-        </p>
       </div>
     );
   }

@@ -10,7 +10,8 @@ import 'Theme/base.scss';
 import { processData } from './utils/processData';
 
 import Scatterplot from './Scatterplot';
-import Table from './Table';
+import TableDouble from './TableDouble';
+import TableRate from './TableRate';
 
 //        <Scatterplot data={data} />
 
@@ -40,9 +41,10 @@ class App extends React.Component {
         <Info {...meta} />
 
         <Markdown source={copy.Intro} className='body' linkTarget='_blank' />
-        <Table data={data} />
+        <TableDouble data={data} />
 
         <Ad.Dynamic />
+        <TableRate data={data} />
 
         <Markdown source={copy.Methodology} className='methodology' linkTarget='_blank' />
 
