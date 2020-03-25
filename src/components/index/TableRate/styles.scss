@@ -3,7 +3,7 @@
 
 .component :global {
   table {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 40px auto;
     @media screen and (max-width: 1000px){
       max-width: 96%;
@@ -13,7 +13,7 @@
       line-height: 1.05;
       padding: 5px 10px;
       text-align: center;
-      font-size: .8rem;
+      font-size: 1rem;
       @media screen and (max-width: 600px) {
         font-size: .6rem;
         padding: 2px 2px;
@@ -21,11 +21,15 @@
       &.country {
         text-align: left;
       }
+      &.counter {
+        text-align: center;
+        width: 50px;
+      }
     }
     td {
       padding: 5px 10px;
       border-bottom: 1px solid $button;
-      font-size: 1rem;
+      font-size: 1.3rem;
       @media screen and (max-width: 600px) {
         padding: 4px 4px;
         font-size: .8rem;
@@ -46,6 +50,10 @@
         text-align: center;
         width: 30px;
       }
+      &.counter {
+        text-align: center;
+        width: 100px;
+      }
       &.bars {
         width: 50px;
         position: relative;
@@ -57,6 +65,10 @@
           background-color: #CC5F44;
           animation-name: progressBar;
           animation-iteration-count: infinite;
+          &.bar-container {
+            background-color: $button;
+            width: 80%;
+          }
         }
       }
     }

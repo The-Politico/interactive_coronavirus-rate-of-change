@@ -64,9 +64,9 @@ export function processData() {
     //
     const total = dates[dates.length - 1].value;
 
-    if (total > 1000) {
+    if (total > 1500) {
       const mostRecent = dates[dates.length - 1];
-      const previous = dates[dates.length - 2];
+      const previous = dates[dates.length - 7];
 
       dataToUse.push({
         country: d.key,

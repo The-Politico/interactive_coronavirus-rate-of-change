@@ -7,6 +7,9 @@ class BarContent extends React.Component {
     return (
       <div className={styles.component + ' class-name'}>
         <div
+          className='bar bar-container'
+        />
+        <div
           className='bar'
           style={{ animationDuration: `${sec}s`}}
         />

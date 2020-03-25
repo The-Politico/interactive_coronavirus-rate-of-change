@@ -3,19 +3,18 @@
 
 .component :global {
   table {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 40px auto;
     @media screen and (max-width: 1000px){
       max-width: 96%;
     }
     th {
-      @include color;
       line-height: 1.05;
       padding: 5px 10px;
       text-align: center;
-      font-size: .8rem;
+      font-size: 1rem;
       @media screen and (max-width: 600px) {
-        font-size: .6rem;
+        font-size: .7rem;
         padding: 2px 2px;
       }
       &.country {
@@ -23,9 +22,9 @@
       }
     }
     td {
-      padding: 5px 10px;
+      padding: 8px 10px;
       border-bottom: 1px solid $button;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       @media screen and (max-width: 600px) {
         padding: 4px 4px;
         font-size: .8rem;
@@ -42,14 +41,32 @@
         text-align: center;
         width: 40px;
         span {
-          display: block;
+          display: inline-block;
           border-radius: 5px;
+        }
+        div.slope-container {
+          background-color: $button;
+          display: inline-block;
+          width:20px;
+          height:20px;
+          position:relative;
+          margin-left: 8px;
+        }
+
+        div.slope{
+          position:absolute;
+          border-bottom: 2px solid red;
+          width: 20px;
+          top: 20px;
+          margin-left: 0px;
+          //transform: rotate(45deg);
+          transform-origin: 0% 0%;
         }
       }
       &.spread {
         text-align: center;
         width: 50px;
-        font-size: .7rem;
+        font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: 1px;
       }

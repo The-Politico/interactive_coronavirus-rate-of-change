@@ -26,6 +26,7 @@ class Table extends React.Component {
               <th className='people'> New positive cases per day </th>
               <th className='new-case'> +1 case every... </th>
               <th className='bar' />
+              <th className='counter'> Cases since you've been reading </th>
             </tr>
           </thead>
           <tbody>
@@ -37,6 +38,7 @@ class Table extends React.Component {
                 <td className='bars'>
                   <BarContent d={d} />
                 </td>
+                <td className='counter'>0</td>
               </tr>
             )}
           </tbody>
