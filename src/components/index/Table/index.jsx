@@ -1,42 +1,31 @@
 import React from 'react';
 import styles from './styles.scss';
-
-import { format, max } from 'd3';
+import BarContent from './BarContent';
+import { format } from 'd3';
 
 class Table extends React.Component {
-  render () {
+  render (){
     const { data } = this.props;
-    data.sort((a, b) => b.population - a.population);
-    const dmax = max(data.map(a => a.population));
-    console.log('danger-zone', data)
+    // const dmax = max(data.map(a => a.))
     return (
       <div className={styles.component + ' class-name'}>
         <table>
           <thead>
             <tr>
-              <th className='occupation'> Occupation </th>
-              <th className='income'> Income </th>
-              <th className='proximity'> Proximity </th>
-              <th className='population'> Employment </th>
-              <th />
+              <th className='country'> Country </th>
+              <th className='double'> Days to <b>double</b> positive cases </th>
+              <th className='people'> New positive cases per day </th>
+              <th className='bar' />
             </tr>
           </thead>
           <tbody>
-            { data.map((d, i) =>
-              <tr>
-                <td className='occupation'>{d.job}</td>
-                <td className='income'>${format(',')(d.income)}</td>
-                <td
-                  className={`proximity bin-${d.bin}`}
-                > 
-                  {d.proximity}
-                </td>
-                <td className='population'>{format(',')(d.population)}</td>
+            {data.map((d, i)=>
+              <tr key={`key-${i}`}>
+                <td className='country'>{d.country}</td>
+                <td className='double'>{Math.round(d.double, 1)}</td>
+                <td className='people'>{format(',')(Math.round(d.people))}</td>
                 <td className='bars'>
-                  <div
-                      className={`bar population bin-${d.bin}`}
-                      style={{ width: `${d.population * 100 / dmax}%`}}
-                    />
+                  <BarContent d={d} />
                 </td>
               </tr>
             )}

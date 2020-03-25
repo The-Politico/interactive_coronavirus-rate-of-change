@@ -49,9 +49,11 @@ export function processData() {
           if (dates[k - a - 1].value === 0) return 0;
           return (dates[k - a].value - dates[k - a - 1].value) / dates[k - a - 1].value
         });
+        const people = indices.map(a => dates[k - a].value - dates[k - a - 1].value)
         const avg = sum(rates) / rates.length;
         x.rates = rates;
         x.avg = avg;
+        x.people = sum(people) / people.length;
         x.double = Math.log(2) / Math.log(1 + avg);
       }
     })
@@ -62,17 +64,19 @@ export function processData() {
     //
     const total = dates[dates.length - 1].value;
 
-    if (total > 5000) {
+    if (total > 1000) {
       const mostRecent = dates[dates.length - 1];
       dataToUse.push({
         country: d.key,
         dates: dates,
         rate: mostRecent.avg,
         double: mostRecent.double,
+        people: mostRecent.people,
       })
     }
   })
 
+  dataToUse.sort((a, b) => a.double - b.double);
   console.log('data to use:', dataToUse);
 
   return dataToUse;
