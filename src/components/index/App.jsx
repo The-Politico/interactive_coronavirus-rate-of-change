@@ -10,7 +10,8 @@ import 'Theme/base.scss';
 import { processData } from './utils/processData';
 
 import Scatterplot from './Scatterplot';
-//         <Scatterplot data={data} />
+//        <Scatterplot data={data} />
+
 
 class App extends React.Component {
   constructor(props){
