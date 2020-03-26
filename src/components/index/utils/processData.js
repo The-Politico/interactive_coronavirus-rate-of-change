@@ -31,12 +31,11 @@ export function processData() {
     for (let i = firstDay; dateString(i, true) < dateString(yesterday, true); i = new Date(i.setDate(i.getDate() + 1))){
       const current = dateString(i, true);
       const value = sum(d.values.map(a => a[dateString(i, false)]));
-
-      dates.push({
-        date: i,
-        dateString: current,
-        value: value,
-      })
+        dates.push({
+          date: i,
+          dateString: current,
+          value: value,
+        })
       j++;
     }
 
@@ -55,6 +54,8 @@ export function processData() {
         x.avg = avg;
         x.people = sum(people) / people.length;
         x.double = Math.log(2) / Math.log(1 + avg);
+        x.new = people[0];
+        x.direction = people[0] > people[1] ? 'up' : 'down';
       }
     })
 
@@ -62,15 +63,15 @@ export function processData() {
     //   x.acc = k < 2 ? 0 : (x.velocity - dates[k-1].velocity) ;
     // })
     //
-    const total = dates[dates.length - 1].value;
-
+    const total = Math.abs(dates[dates.length - 1].value);
+    //console.log(total, dates[dates.length - 1])
     if (total > 1500) {
       const mostRecent = dates[dates.length - 1];
       const previous = dates[dates.length - 7];
 
       dataToUse.push({
         country: d.key,
-        dates: dates,
+        dates: dates.filter(a => a.value > 100),
         rate: mostRecent.avg,
         double: mostRecent.double,
         people: mostRecent.people,

@@ -1,0 +1,23 @@
+@import '~politico-style/scss/base/main.scss';
+
+.component :global {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  div.bar-container {
+    float: left;
+    position: relative;
+    height: 50px;
+    div.bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      &.up {
+        background-color: $no;
+      }
+      &.down {
+        background-color: $yes;
+      }
+    }
+  }
+}

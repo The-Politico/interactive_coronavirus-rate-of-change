@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
-import { format } from 'd3';
+import Histogram from './../Histogram';
 
 class Table extends React.Component {
   render (){
@@ -21,32 +21,22 @@ class Table extends React.Component {
           <thead>
             <tr>
               <th className='country'> Country </th>
-              <th className='double'> Days to <b>double</b> positive cases </th>
-              <th className='spread'> Change since last week </th>
+              <th className='double'> At current rate, time to <b>double</b> positive cases </th>
+              <th className='spread'> Date of peak infection </th>
+              <th className='histogram'> New infections per day </th>
             </tr>
           </thead>
           <tbody>
             {data.map((d, i)=>
-              <tr key={`key-${i}`}
-                style={{ background: `rgba(204, 95, 68, ${2 / d.double})`}}
-              >
+              <tr key={`key-${i}`} >
                 <td className='country'>{d.country}</td>
                 <td className='double'>
-                  <span>
-                    {Math.round(d.double, 1)}
-                  </span>
-                  <div className='slope-container'>
-                    <div className='slope'
-                      style={
-                        {
-                          transform: `rotate(-${180 / d.double}deg)`,
-                          width: `${20 / Math.cos(Math.PI / d.double)}px`
-                        }
-                      }
-                    />
-                  </div>
+                    {Math.round(d.double, 1)} days
                 </td>
                 <td className={`spread ${spreadClass(d)}`}>{spread(d)}</td>
+                <td className='histogram'>
+                  <Histogram data={d.dates} />
+                </td>
               </tr>
             )}
           </tbody>

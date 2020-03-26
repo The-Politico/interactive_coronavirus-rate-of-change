@@ -3,7 +3,7 @@
 
 .component :global {
   table {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 40px auto;
     @media screen and (max-width: 1000px){
       max-width: 96%;
@@ -25,12 +25,12 @@
       padding: 8px 10px;
       border-bottom: 1px solid $button;
       font-size: 1.3rem;
+      width: 20%;
       @media screen and (max-width: 600px) {
         padding: 4px 4px;
         font-size: .8rem;
       }
       &.country {
-        width: 120px;
         line-height: 1.2;
         text-align: left;
         @media screen and (max-width: 600px) {
@@ -39,36 +39,14 @@
       }
       &.double {
         text-align: center;
-        width: 40px;
-        span {
-          display: inline-block;
-          border-radius: 5px;
-        }
-        div.slope-container {
-          background-color: $button;
-          display: inline-block;
-          width:20px;
-          height:20px;
-          position:relative;
-          margin-left: 8px;
-        }
-
-        div.slope{
-          position:absolute;
-          border-bottom: 2px solid red;
-          width: 20px;
-          top: 20px;
-          margin-left: 0px;
-          //transform: rotate(45deg);
-          transform-origin: 0% 0%;
-        }
       }
       &.spread {
         text-align: center;
-        width: 50px;
         font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+      }
+      &.histogram {
       }
 
     }

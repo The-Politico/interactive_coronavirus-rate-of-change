@@ -9,18 +9,13 @@ import 'Theme/base.scss';
 
 import { processData } from './utils/processData';
 
-import Scatterplot from './Scatterplot';
 import TableDouble from './TableDouble';
 import TableRate from './TableRate';
-
-//        <Scatterplot data={data} />
 
 
 class App extends React.Component {
   constructor(props){
     super(props);
-    //const { usData, usNowData, stateData, timestamp} = props;
-
     const processedData = processData();
     this.state = {
       data: processedData,
@@ -30,7 +25,7 @@ class App extends React.Component {
   render() {
     const { copy, timestamp } = this.props;
     const { data } = this.state;
-    //console.log(usResults, stateResults);
+    //console.log('hello???', data)
 
     return (
       <div>
