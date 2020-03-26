@@ -7,7 +7,6 @@ class Histogram extends React.Component {
     const { data } = this.props;
     const w = 100 / data.length;
     const dmax = max(data.map(a => a.new));
-    console.log(data)
     return (
       <div className={styles.component + ' class-name'}>
        {data.map((a, i) =>
@@ -17,7 +16,7 @@ class Histogram extends React.Component {
           style={{ width: `${w}%`}}
         >
           <div
-            className={`bar ${a.direction}`}
+            className={`bar ${a.pastPeak}`}
             style={{
               height: `${100 * a.new / dmax}%`
             }}

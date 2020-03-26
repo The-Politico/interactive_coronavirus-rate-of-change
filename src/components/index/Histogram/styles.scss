@@ -12,10 +12,10 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      &.up {
+      &.false {
         background-color: $no;
       }
-      &.down {
+      &.true {
         background-color: $yes;
       }
     }

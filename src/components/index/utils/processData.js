@@ -64,16 +64,20 @@ export function processData() {
     // })
     //
     const total = Math.abs(dates[dates.length - 1].value);
-    const peak = max(dates.map(a => a.people));
-    const peakPt = dates.filter(a => a.people === peak)[0];
+    const peak = max(dates.map(a => +a.new));
+    const peakPt = dates.filter(a => a.new === peak)[0];
     const peakIndex = dates.indexOf(peakPt)
-    const daysAgo = dates.length - 1 - peakIndex;
+    const daysAgo = dates.length - peakIndex;
     const peaked = daysAgo > 6;
 
     //console.log(total, dates[dates.length - 1])
-    if (total > 1500) {
+    if (total > 1000) {
       const mostRecent = dates[dates.length - 1];
       const previous = dates[dates.length - 7];
+
+      dates.forEach((x, k) => {
+        x.pastPeak = x.new < peak && k > peakIndex;
+      })
 
       dataToUse.push({
         country: d.key,

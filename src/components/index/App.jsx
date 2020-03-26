@@ -35,12 +35,18 @@ class App extends React.Component {
         <Dek>{copy.Dek}</Dek>
         <Info {...meta} />
 
-        <Markdown source={copy.Intro} className='body' linkTarget='_blank' />
+        <h3 className='subhed'>{copy.ClimbingHed}</h3>
+        <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
         <TableDouble data={data.filter(a => !a.peaked)} />
 
+        <h3 className='subhed'>{copy.PeakedHed}</h3>
+        <Markdown source={copy.PeakedContent} className='body' linkTarget='_blank' />
         <TableDouble data={data.filter(a => a.peaked)} />
 
         <Ad.Dynamic />
+        
+        <h3 className='subhed'>{copy.NewHed}</h3>
+        <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
         <TableRate data={data} />
 
         <Markdown source={copy.Methodology} className='methodology' linkTarget='_blank' />
