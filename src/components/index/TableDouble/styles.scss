@@ -28,21 +28,29 @@
       width: 20%;
       @media screen and (max-width: 600px) {
         padding: 4px 4px;
-        font-size: 1.1rem;
+        font-size: .9rem;
+        width: 25%;
       }
       &.country {
         line-height: 1.2;
         text-align: left;
-
       }
       &.double {
         text-align: center;
+        @media screen and (max-width: 600px) {
+          line-height: 1.2;
+          font-size: .9rem;
+        }
       }
       &.spread {
         text-align: center;
         font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        @media screen and (max-width: 600px) {
+          line-height: 1.2;
+          font-size: .7rem;
+        }
       }
       &.histogram {
       }

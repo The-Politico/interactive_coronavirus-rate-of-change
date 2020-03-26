@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.scss';
-import { max } from 'd3';
+import { max, format } from 'd3';
 
 class Histogram extends React.Component {
   render () {
@@ -13,7 +13,10 @@ class Histogram extends React.Component {
          <div
           className='bar-container'
           key={`key-${i}`}
-          style={{ width: `${w}%`}}
+          style={{
+            width: `${w}%`,
+            borderTop: `${a.pastPeak ? 'none' : '1px solid #DCDCDC'}`
+          }}
         >
           <div
             className={`bar ${a.pastPeak}`}
@@ -23,6 +26,7 @@ class Histogram extends React.Component {
           />
          </div>
        )}
+       <p className='peak-nb'>{format(',')(dmax)}</p>
       </div>
     );
   }

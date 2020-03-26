@@ -4,14 +4,26 @@
   width: 150px;
   height: 40px;
   margin: 0 auto;
+  position: relative;
   @media screen and (max-width: 600px){
     width: 120px;
     height: 30px;
   }
+  p.peak-nb {
+    position: absolute;
+    font-family: $din;
+    margin: 0;
+    font-size: .7rem;
+    top: -3px;
+    color: $satan;
+    background-color: white;
+    padding: 0;
+  }
   div.bar-container {
     float: left;
     position: relative;
-    height: 40px;
+    height: 35px;
+    margin-top: 5px;
     @media screen and (max-width: 600px){
       height: 30px;
     }
