@@ -5,15 +5,6 @@ import Histogram from './../Histogram';
 class Table extends React.Component {
   render (){
     const { data } = this.props;
-    function spread(d){
-      const diff = Math.round(d.double - d.previous);
-      if (diff === 0) { return 'No change' }
-      else if (diff > 0) { return '+' + diff }
-      else { return diff }
-    }
-    function spreadClass(d){
-      return d.double > d.previous ? 'slower' : 'faster';
-    }
     // const dmax = max(data.map(a => a.))
     return (
       <div className={styles.component + ' class-name'}>
@@ -33,7 +24,7 @@ class Table extends React.Component {
                 <td className='double'>
                     {Math.round(d.double, 1)} days
                 </td>
-                <td className={`spread ${spreadClass(d)}`}>{spread(d)}</td>
+                <td className='spread'>{d.peak}</td>
                 <td className='histogram'>
                   <Histogram data={d.dates} />
                 </td>

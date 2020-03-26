@@ -36,7 +36,9 @@ class App extends React.Component {
         <Info {...meta} />
 
         <Markdown source={copy.Intro} className='body' linkTarget='_blank' />
-        <TableDouble data={data} />
+        <TableDouble data={data.filter(a => !a.peaked)} />
+
+        <TableDouble data={data.filter(a => a.peaked)} />
 
         <Ad.Dynamic />
         <TableRate data={data} />

@@ -64,6 +64,12 @@ export function processData() {
     // })
     //
     const total = Math.abs(dates[dates.length - 1].value);
+    const peak = max(dates.map(a => a.people));
+    const peakPt = dates.filter(a => a.people === peak)[0];
+    const peakIndex = dates.indexOf(peakPt)
+    const daysAgo = dates.length - 1 - peakIndex;
+    const peaked = daysAgo > 6;
+
     //console.log(total, dates[dates.length - 1])
     if (total > 1500) {
       const mostRecent = dates[dates.length - 1];
@@ -76,6 +82,8 @@ export function processData() {
         double: mostRecent.double,
         people: mostRecent.people,
         previous: previous.double,
+        peaked: peaked,
+        peak: peaked ? peakPt.dateString : 'Climbing',
       })
     }
   })
