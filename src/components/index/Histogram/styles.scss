@@ -4,10 +4,17 @@
   width: 150px;
   height: 40px;
   margin: 0 auto;
+  @media screen and (max-width: 600px){
+    width: 120px;
+    height: 30px;
+  }
   div.bar-container {
     float: left;
     position: relative;
     height: 40px;
+    @media screen and (max-width: 600px){
+      height: 30px;
+    }
     div.bar {
       position: absolute;
       bottom: 0;

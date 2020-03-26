@@ -2,12 +2,18 @@
 
 .component :global {
   width: 200px;
-  height: 100px;
+  height: 80px;
   margin: 0 auto;
+  @media screen and (max-width: 800px){
+    width: 240px;
+  }
+  @media screen and (max-width: 600px){
+    width: 160px;
+  }
   div.bar-container {
     float: left;
     position: relative;
-    height: 50px;
+    height: 80px;
     div.bar {
       position: absolute;
       bottom: 0;

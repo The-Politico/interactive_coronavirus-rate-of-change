@@ -9,6 +9,7 @@ import 'Theme/base.scss';
 
 import { processData } from './utils/processData';
 
+import TopPack from './TopPack';
 import TableDouble from './TableDouble';
 import TableRate from './TableRate';
 
@@ -35,6 +36,15 @@ class App extends React.Component {
         <Dek>{copy.Dek}</Dek>
         <Info {...meta} />
 
+        <TopPack
+          title='Spread still growing'
+          data={data.filter(a => !a.peaked).slice(0, 4)}
+        />
+        <TopPack
+          title='Infection contained'
+          data={data.filter(a => a.peaked).slice(0, 4)}
+        />
+
         <h3 className='subhed'>{copy.ClimbingHed}</h3>
         <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
         <TableDouble data={data.filter(a => !a.peaked)} />
@@ -44,7 +54,7 @@ class App extends React.Component {
         <TableDouble data={data.filter(a => a.peaked)} />
 
         <Ad.Dynamic />
-        
+
         <h3 className='subhed'>{copy.NewHed}</h3>
         <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
         <TableRate data={data} />

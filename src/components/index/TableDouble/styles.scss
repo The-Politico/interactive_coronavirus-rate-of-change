@@ -28,14 +28,12 @@
       width: 20%;
       @media screen and (max-width: 600px) {
         padding: 4px 4px;
-        font-size: .8rem;
+        font-size: 1.1rem;
       }
       &.country {
         line-height: 1.2;
         text-align: left;
-        @media screen and (max-width: 600px) {
-          width: 80px;
-        }
+
       }
       &.double {
         text-align: center;
