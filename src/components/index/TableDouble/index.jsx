@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.scss';
 import Histogram from './../Histogram';
-
+import { timeFormat } from 'd3';
 class Table extends React.Component {
   render (){
     const { data, label } = this.props;
@@ -24,7 +24,7 @@ class Table extends React.Component {
                 <td className='double'>
                     {Math.round(d.double, 1)} days
                 </td>
-                <td className='spread'>{d.peak}</td>
+                <td className='spread'>{timeFormat('%b %d')(new Date(d.peak))}</td>
                 <td className='histogram'>
                   <Histogram data={d.dates} />
                 </td>

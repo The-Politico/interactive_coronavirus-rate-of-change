@@ -87,7 +87,7 @@ export function processData() {
         people: mostRecent.people,
         previous: previous.double,
         peaked: peaked,
-        peak: peaked ? peakPt.dateString : 'Climbing',
+        peak: peakPt.dateString,
       })
     }
   })
