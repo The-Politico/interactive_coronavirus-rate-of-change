@@ -1,19 +1,19 @@
 {
   "name": "interactive_interactive_coronavirus-rate-of-change",
   "version": "1.0.0",
-  "description": "",
+  "description": "Coronavirus cases by country | Where is COVID-19 spreading fastest?",
   "main": "index.js",
   "pib": {
     "template": "dynamic",
     "id": "QT8xWcsx",
-    "pageName": "interactive_coronavirus-rate-of-change",
+    "pageName": "Coronavirus cases by country | Where is COVID-19 spreading fastest?",
     "siteSection": "politics",
     "pageType": "interactives",
     "adUnitSection": "politics",
     "freePaidContent": "free",
     "opinion": false,
     "site": "core",
-    "publishPath": "interactives/2020/interactive_coronavirus-rate-of-change/",
+    "publishPath": "interactives/2020/number-of-coronavirus-cases-by-country/",
     "published": null,
     "updated": null,
     "authors": [
