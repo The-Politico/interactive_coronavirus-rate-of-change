@@ -21,13 +21,7 @@
         font-size: .6rem;
         padding: 2px 2px;
       }
-      &.country {
-        text-align: left;
-      }
-      &.counter {
-        text-align: center;
-        //width: 50px;
-      }
+      text-align: left;
     }
     td {
       padding: 5px 10px;
@@ -48,6 +42,8 @@
       &.new-case {
         text-align: center;
         width: 25%;
+        font-size: 1.1rem;
+        font-weight: 300;
       }
       &.counter {
         text-align: center;

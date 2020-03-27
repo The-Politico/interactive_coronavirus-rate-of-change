@@ -43,24 +43,25 @@ class App extends React.Component {
         <Ad.Dynamic />
 
         <h3 className='subhed'>{copy.NewHed}</h3>
-        <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
         <TableRate data={data} />
+        <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
 
         <Ad.Dynamic />
 
         <h3 className='subhed'>{copy.ClimbingHed}</h3>
-        <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
         <TableDouble
           data={data.filter(a => !a.peaked)}
           label='Date of highest infection so far'
         />
+        <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
+
 
         <h3 className='subhed'>{copy.PeakedHed}</h3>
-        <Markdown source={copy.PeakedContent} className='body' linkTarget='_blank' />
         <TableDouble
           data={data.filter(a => a.peaked)}
           label='Date of peak infection'
         />
+        <Markdown source={copy.PeakedContent} className='body' linkTarget='_blank' />
 
 
 
