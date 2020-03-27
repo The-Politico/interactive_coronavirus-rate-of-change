@@ -1,0 +1,12 @@
+@import "~@politico/interactive-style/vars.scss";
+.styles :global {
+
+  font-family: $din;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 16px;
+
+  span {
+    color: $negative;
+  }
+}
