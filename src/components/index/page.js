@@ -20,10 +20,10 @@ class Page extends React.PureComponent {
   render() {
     return (
       <div className='story'>
+        <Ad.Banner />
 
         <Head {...content.meta} />
         <Navigation />
-        <Ad.Banner />
         <Container>
           <div id='story' />
           <Comments publishPath={meta.publishPath} />
