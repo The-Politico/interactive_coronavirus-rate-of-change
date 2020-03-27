@@ -12,6 +12,7 @@ import { processData } from './utils/processData';
 import TopBars from './TopBars';
 import TableDouble from './TableDouble';
 import TableRate from './TableRate';
+import SlimCounter from './SlimCounter';
 
 
 class App extends React.Component {
@@ -31,6 +32,7 @@ class App extends React.Component {
     return (
       <div>
         <TopBars data={data}/>
+        <SlimCounter data={data} />
 
         <Share subject={meta.pageName} shareTweet={content.meta.social.twitter.share_tweet} />
         <Section href={content.section.link}>{content.section.name}</Section>
