@@ -2,6 +2,8 @@
 @import 'Theme/mixins.scss';
 
 .component :global {
+  margin-bottom: 40px;
+  display: block;
   table {
     max-width: 800px;
     margin: 40px auto;

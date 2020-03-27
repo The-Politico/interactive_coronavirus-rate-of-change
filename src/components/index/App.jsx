@@ -38,6 +38,9 @@ class App extends React.Component {
         <Dek>{copy.Dek}</Dek>
         <Info {...meta} />
 
+        <Markdown source={copy.Intro} className='body' linkTarget='_blank' />
+
+        <Ad.Dynamic />
 
         <h3 className='subhed'>{copy.ClimbingHed}</h3>
         <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
