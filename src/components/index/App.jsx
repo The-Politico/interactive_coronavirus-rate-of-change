@@ -42,6 +42,12 @@ class App extends React.Component {
 
         <Ad.Dynamic />
 
+        <h3 className='subhed'>{copy.NewHed}</h3>
+        <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
+        <TableRate data={data} />
+
+        <Ad.Dynamic />
+
         <h3 className='subhed'>{copy.ClimbingHed}</h3>
         <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
         <TableDouble
@@ -56,11 +62,7 @@ class App extends React.Component {
           label='Date of peak infection'
         />
 
-        <Ad.Dynamic />
 
-        <h3 className='subhed'>{copy.NewHed}</h3>
-        <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
-        <TableRate data={data} />
 
         <Markdown source={copy.Methodology} className='methodology' linkTarget='_blank' />
 
