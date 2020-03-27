@@ -67,13 +67,13 @@ export function processData() {
     const peak = max(dates.map(a => +a.new));
     const peakPt = dates.filter(a => a.new === peak)[0];
     const peakIndex = dates.indexOf(peakPt)
-    const daysAgo = dates.length - peakIndex;
-    const peaked = daysAgo > 6;
+    //const daysAgo = dates.length - peakIndex;
 
     //console.log(total, dates[dates.length - 1])
     if (total > 1000) {
       const mostRecent = dates[dates.length - 1];
       const previous = dates[dates.length - 7];
+      const peaked = mostRecent.double > 13;
 
       dates.forEach((x, k) => {
         x.pastPeak = x.new < peak && k > peakIndex;

@@ -1,0 +1,60 @@
+@import '~politico-style/scss/base/main.scss';
+@import 'Theme/mixins.scss';
+
+.component :global {
+  table {
+    max-width: 600px;
+    margin: 40px auto;
+    @media screen and (max-width: 600px){
+      max-width: 96%;
+    }
+    th {
+      @include color;
+      line-height: 1.05;
+      padding: 5px 10px;
+      text-align: center;
+      font-size: 1rem;
+      @media screen and (max-width: 600px) {
+        font-size: .6rem;
+        padding: 2px 2px;
+      }
+      &.country {
+        text-align: left;
+      }
+      &.counter {
+        text-align: center;
+        //width: 50px;
+      }
+    }
+    td {
+      padding: 5px 10px;
+      border-bottom: 1px solid $button;
+      font-size: 1.8rem;
+      @media screen and (max-width: 600px) {
+        padding: 4px 4px;
+        font-size: .8rem;
+      }
+      &.country {
+        //width: 120px;
+        line-height: 1.2;
+        text-align: left;
+        @media screen and (max-width: 600px) {
+          width: 80px;
+        }
+      }
+      &.new-case {
+        text-align: center;
+        width: 25%;
+      }
+      &.counter {
+        text-align: center;
+        width: 25%;
+        color: $no;
+      }
+      &.bars {
+        width: 25%;
+        position: relative;
+      }
+    }
+  }
+}
