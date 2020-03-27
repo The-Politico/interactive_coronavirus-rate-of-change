@@ -4,7 +4,7 @@ import Histogram from './../Histogram';
 
 class Table extends React.Component {
   render (){
-    const { data } = this.props;
+    const { data, label } = this.props;
     // const dmax = max(data.map(a => a.))
     return (
       <div className={styles.component + ' class-name'}>
@@ -13,7 +13,7 @@ class Table extends React.Component {
             <tr>
               <th className='country'> Country </th>
               <th className='double'> At current rate, time to <b>double</b> positive cases </th>
-              <th className='spread'> Date of peak infection </th>
+              <th className='spread'> { label }</th>
               <th className='histogram'> New infections per day </th>
             </tr>
           </thead>
