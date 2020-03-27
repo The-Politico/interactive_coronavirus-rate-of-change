@@ -14,7 +14,7 @@ function getTime(people){
 }
 
 const TableRow = (props) => {
-  const { data } = props;
+  const { data, hiddenClass } = props;
   const { country, people} = data;
   const milliseconds = (24 * 3600 * 1000) / people;
   const [counter, incrementCounter] = useState(0);
@@ -30,7 +30,7 @@ const TableRow = (props) => {
   });
 
   return (
-    <tr className={styles}>
+    <tr className={styles + ' ' + hiddenClass}>
       <td className='country'>{country}</td>
       <td className='people'>{format(',')(Math.round(people))}</td>
       <td className='new-case'>{getTime(people)}</td>
