@@ -13,6 +13,7 @@
       padding: 5px 10px;
       text-align: center;
       font-size: 1rem;
+      font-weight: normal;
       @media screen and (max-width: 600px) {
         font-size: .7rem;
         padding: 2px 2px;
@@ -34,9 +35,12 @@
       &.country {
         line-height: 1.2;
         text-align: left;
+        font-weight: bold;
       }
       &.double {
         text-align: center;
+        font-size: 1.1rem;
+        font-weight: 300;
         @media screen and (max-width: 600px) {
           line-height: 1.2;
           font-size: .9rem;
@@ -44,15 +48,15 @@
       }
       &.spread {
         text-align: center;
-        font-size: .9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        font-size: 1.1rem;
+        font-weight: 300;
         @media screen and (max-width: 600px) {
           line-height: 1.2;
           font-size: .7rem;
         }
       }
       &.histogram {
+        padding-bottom: 0;
       }
 
     }

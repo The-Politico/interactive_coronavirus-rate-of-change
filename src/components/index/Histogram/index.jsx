@@ -15,7 +15,7 @@ class Histogram extends React.Component {
           key={`key-${i}`}
           style={{
             width: `${w}%`,
-            borderTop: `${a.pastPeak ? 'none' : '1px solid #DCDCDC'}`
+            borderTop: `${a.pastPeak ? 'none' : '1px solid #EF8B67'}`
           }}
         >
           <div

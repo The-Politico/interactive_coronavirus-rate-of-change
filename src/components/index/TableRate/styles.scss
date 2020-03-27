@@ -16,6 +16,7 @@
       padding: 5px 10px;
       text-align: center;
       font-size: 1rem;
+      font-weight: normal;
       @media screen and (max-width: 600px) {
         font-size: .6rem;
         padding: 2px 2px;
@@ -40,6 +41,8 @@
         //width: 120px;
         line-height: 1.2;
         text-align: left;
+        font-weight: bold;
+        font-size: 1.2rem;
         @media screen and (max-width: 600px) {
           width: 80px;
         }
@@ -47,14 +50,21 @@
       &.people {
         text-align: center;
         width: 150px;
+        font-size: 1.1rem;
+        font-weight: 300;
       }
       &.new-case {
         text-align: center;
         width: 150px;
+        font-size: 1.1rem;
+        font-weight: 300;
       }
       &.counter {
         text-align: center;
         width: 150px;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: $no;
       }
       &.bars {
         width: 150px;

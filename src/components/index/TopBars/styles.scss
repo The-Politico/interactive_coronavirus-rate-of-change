@@ -16,6 +16,7 @@
       padding: 5px 10px;
       text-align: center;
       font-size: 1rem;
+      font-weight: normal;
       @media screen and (max-width: 600px) {
         font-size: .6rem;
         padding: 2px 2px;
@@ -37,9 +38,9 @@
         font-size: .8rem;
       }
       &.country {
-        //width: 120px;
         line-height: 1.2;
         text-align: left;
+        font-weight: bold;
         @media screen and (max-width: 600px) {
           width: 80px;
         }
