@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './styles.scss';
-class BarContent extends React.Component {
-  render () {
-    const { people } = this.props;
-    const sec = (24 * 3600) / people;
-    return (
-      <div className={styles.component + ' class-name'}>
-        <div
-          className='bar bar-container'
-        />
+const BarContent = (props) => {
+  const { width } = props;
+
+  return (
+    <div className={styles.component + ' class-name'}>
+      <div
+        className='bar-container'
+      >
         <div
           className='bar'
-          style={{ animationDuration: `${sec}s`}}
+          style={{
+            width: `${width}%`
+          }}
         />
       </div>
-    );
-  }
+    </div>
+  );
+
 }
 export default BarContent;

@@ -1,18 +1,19 @@
 @import '~politico-style/scss/base/main.scss';
 
 .component :global {
-  div.bar {
+
+  .bar-container {
+    background-color: $button;
     height: 12px;
-    position: absolute;
-    top: calc(50% - 6px);
-    left: 8px;
+    position: relative;
+    width: 79%;
+  }
+
+  div.bar {
     background-color: $negative;
-    animation-name: progressBar;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    &.bar-container {
-      background-color: $button;
-      width: 80%;
-    }
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
   }
 }
