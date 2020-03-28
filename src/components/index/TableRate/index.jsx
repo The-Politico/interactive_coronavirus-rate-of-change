@@ -7,7 +7,7 @@ const Table = (props) => {
   data.sort((a, b) => b.people - a.people);
   const [tableHide, toggleTable] = useState(true);
   const hiddenClass = tableHide ? 'hidden' : '';
-  const buttonText = tableHide ? 'Show all states' : 'Hide states';
+  const buttonText = tableHide ? 'Show all countries' : 'Hide countries';
 
   // const dmax = max(data.map(a => a.))
   return (
