@@ -17,7 +17,7 @@ class TopBars extends React.Component {
               <th className='country'>In the...</th>
               <th className='new-case'>One person tests positive for COVID-19 every... </th>
               <th className='bar' />
-              <th className='counter'> That's this many cases since you've been reading </th>
+              <th className='counter'> That's this many cases since you've been reading: </th>
             </tr>
           </thead>
           <tbody>

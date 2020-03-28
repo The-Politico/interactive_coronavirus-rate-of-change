@@ -31,14 +31,15 @@ class App extends React.Component {
 
     return (
       <div>
-        <TopBars data={data}/>
-        <SlimCounter data={data} />
-
         <Share subject={meta.pageName} shareTweet={content.meta.social.twitter.share_tweet} />
         <Section href={content.section.link}>{content.section.name}</Section>
         <Headline>{copy.Hed}</Headline>
         <Dek>{copy.Dek}</Dek>
         <Info {...meta} />
+
+        <TopBars data={data}/>
+        <SlimCounter data={data} />
+
 
         <Markdown source={copy.Intro} className='body' linkTarget='_blank' />
 
@@ -57,13 +58,13 @@ class App extends React.Component {
         />
         <Markdown source={copy.ClimbingContent} className='body' linkTarget='_blank' />
 
+        <Markdown source={copy.PeakedContent} className='body' linkTarget='_blank' />
 
-        <h3 className='subhed'>{copy.PeakedHed}</h3>
         <TableDouble
           data={data.filter(a => a.peaked)}
           label='Date of peak infection'
         />
-        <Markdown source={copy.PeakedContent} className='body' linkTarget='_blank' />
+
 
 
 

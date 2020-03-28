@@ -18,7 +18,7 @@ const SlimCounter = (props) => {
     <div className={classnames('SlimCounter', styles)}>
       <div className='content'>
         <div className='label desktop'>Estimated cases since you began reading:</div>
-        <div className='label mobile'>Cases:</div>
+        <div className='label mobile'>Cases since reading:</div>
         {
           dataToUse.map((d) => (
             <CounterItem key={d.country} data={d} />

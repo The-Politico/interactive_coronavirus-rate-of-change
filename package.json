@@ -1,12 +1,12 @@
 {
   "name": "interactive_interactive_coronavirus-rate-of-change",
   "version": "1.0.0",
-  "description": "Coronavirus cases by country | Where is COVID-19 spreading fastest?",
+  "description": "Coronavirus cases by country | Two better ways to chart the spread of COVID-19",
   "main": "index.js",
   "pib": {
     "template": "dynamic",
     "id": "QT8xWcsx",
-    "pageName": "Coronavirus cases by country | Where is COVID-19 spreading fastest?",
+    "pageName": "Coronavirus cases by country | Two better ways to chart the spread of COVID-19",
     "siteSection": "politics",
     "pageType": "interactives",
     "adUnitSection": "politics",
@@ -14,8 +14,8 @@
     "opinion": false,
     "site": "core",
     "publishPath": "interactives/2020/number-of-coronavirus-cases-by-country/",
-    "published": null,
-    "updated": null,
+    "published": "2020-03-27T23:51:28.312Z",
+    "updated": "2020-03-28T13:43:40.257Z",
     "authors": [
       {
         "link": "https://www.twitter.com/beatricezjin",
