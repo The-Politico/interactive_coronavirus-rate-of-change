@@ -22,13 +22,11 @@ export function processData() {
     .key(a => a['Country/Region'])
     .entries(data);
 
-  console.log(data, nested);
-
   nested.forEach(d => {
     const dates = [];
     const firstDay = new Date('01/22/2020');
     let j = 0;
-    for (let i = firstDay; dateString(i, true) < dateString(yesterday, true); i = new Date(i.setDate(i.getDate() + 1))){
+    for (let i = firstDay; dateString(i, true) <= dateString(yesterday, true); i = new Date(i.setDate(i.getDate() + 1))){
       const current = dateString(i, true);
       const value = sum(d.values.map(a => a[dateString(i, false)]));
         dates.push({
