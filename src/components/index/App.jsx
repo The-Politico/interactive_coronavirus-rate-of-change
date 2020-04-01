@@ -18,7 +18,9 @@ import SlimCounter from './SlimCounter';
 class App extends React.Component {
   constructor(props){
     super(props);
-    const processedData = processData();
+    const { data } = props;
+    //console.log(data)
+    const processedData = processData(data);
     this.state = {
       data: processedData,
     }
@@ -27,7 +29,7 @@ class App extends React.Component {
   render() {
     const { copy, timestamp } = this.props;
     const { data } = this.state;
-    //console.log('hello???', data)
+    console.log('hello???', timestamp)
 
     return (
       <div>
@@ -35,7 +37,7 @@ class App extends React.Component {
         <Section href={content.section.link}>{content.section.name}</Section>
         <Headline>{copy.Hed}</Headline>
         <Dek>{copy.Dek}</Dek>
-        <Info {...meta} />
+        <Info {...meta} updated={timestamp} />
 
         <TopBars data={data}/>
         <SlimCounter data={data} />

@@ -1,4 +1,3 @@
-import data from 'Data/data.json';
 import { timeFormat, sum, max, min, nest } from 'd3';
 
 function dateString(date, zero) {
@@ -10,7 +9,7 @@ function dateString(date, zero) {
   return `${mo}/${day}/${yr}`;
 }
 
-export function processData() {
+export function processData(data) {
   const dataToUse = [];
   const today = new Date(); // dateString(new Date(), true);
   const yesterday = new Date(today);
@@ -91,7 +90,7 @@ export function processData() {
   })
 
   dataToUse.sort((a, b) => a.double - b.double);
-  console.log('data to use:', dataToUse);
+  //console.log('data to use:', dataToUse);
 
   return dataToUse;
 }
