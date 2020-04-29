@@ -45,13 +45,13 @@ class App extends React.Component {
 
         <Markdown source={copy.Intro} className='body' linkTarget='_blank' />
 
-        <Ad.Dynamic />
+        <Ad.Dynamic type='supercube' />
 
         <h3 className='subhed'>{copy.NewHed}</h3>
         <TableRate data={data} />
         <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
 
-        <Ad.Dynamic />
+        <Ad.Dynamic type='supercube' />
 
         <h3 className='subhed'>{copy.ClimbingHed}</h3>
         <TableDouble
