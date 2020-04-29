@@ -43,9 +43,9 @@ export function processData(data) {
         const indices = [0, 1, 2];
         const rates = indices.map(a => {
           if (dates[k - a - 1].value === 0) return 0;
-          return (dates[k - a].value - dates[k - a - 1].value) / dates[k - a - 1].value
+          return Math.abs((dates[k - a].value - dates[k - a - 1].value) / dates[k - a - 1].value);
         });
-        const people = indices.map(a => dates[k - a].value - dates[k - a - 1].value)
+        const people = indices.map(a => Math.abs(dates[k - a].value - dates[k - a - 1].value));
         const avg = sum(rates) / rates.length;
         x.rates = rates;
         x.avg = avg;
@@ -76,20 +76,22 @@ export function processData(data) {
         x.pastPeak = x.new < peak && k > peakIndex;
       })
 
-      dataToUse.push({
-        country: d.key,
-        dates: dates.filter(a => a.value > 100),
-        rate: mostRecent.avg,
-        double: mostRecent.double,
-        people: mostRecent.people,
-        previous: previous.double,
-        peaked: peaked,
-        peak: peakPt.dateString,
-      })
+        // Exclude countries that have been 0 for several days
+        dataToUse.push({
+          country: d.key,
+          dates: dates.filter(a => a.value > 100),
+          rate: mostRecent.avg,
+          double: mostRecent.double,
+          people: mostRecent.people,
+          previous: previous.double,
+          peaked: peaked,
+          peak: peakPt.dateString,
+        })
     }
   })
 
   dataToUse.sort((a, b) => a.double - b.double);
+
   //console.log('data to use:', dataToUse);
 
   return dataToUse;

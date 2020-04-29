@@ -29,8 +29,8 @@ class App extends React.Component {
   render() {
     const { copy, timestamp } = this.props;
     const { data } = this.state;
-    console.log('hello???', timestamp)
 
+    console.log(data)
     return (
       <div>
         <Share subject={meta.pageName} shareTweet={content.meta.social.twitter.share_tweet} />
@@ -48,7 +48,7 @@ class App extends React.Component {
         <Ad.Dynamic type='supercube' />
 
         <h3 className='subhed'>{copy.NewHed}</h3>
-        <TableRate data={data} />
+        <TableRate data={data.filter(a => a.rate > 0)} />
         <Markdown source={copy.NewContent} className='body' linkTarget='_blank' />
 
         <Ad.Dynamic type='supercube' />

@@ -22,7 +22,7 @@ class Table extends React.Component {
               <tr key={`key-${i}`} >
                 <td className='country'>{d.country}</td>
                 <td className='double'>
-                    {Math.round(d.double, 1)} days
+                  {d.rate === 0 ? 'No new recent cases' : Math.round(d.double, 1) + ' days'}
                 </td>
                 <td className='spread'>{timeFormat('%b %d')(new Date(d.peak))}</td>
                 <td className='histogram'>

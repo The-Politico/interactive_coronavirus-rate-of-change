@@ -23,7 +23,7 @@
       }
     }
     td {
-      padding: 20px 10px 8px;
+      padding: 10px 10px 8px;
       border-bottom: 1px solid $button;
       font-size: 1.3rem;
       width: 20%;
@@ -41,6 +41,7 @@
         text-align: center;
         font-size: 1.1rem;
         font-weight: 500;
+        //line-height: 1.2;
         @media screen and (max-width: 600px) {
           line-height: 1.2;
           font-size: .9rem;
