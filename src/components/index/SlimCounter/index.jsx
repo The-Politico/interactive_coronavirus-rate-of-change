@@ -13,7 +13,7 @@ const SlimCounter = (props) => {
 
   data.sort((a, b) => b.people - a.people);
   const dataToUse = [data[0], data[1], data[2]];
-
+  console.log(dataToUse)
   return (
     <div className={classnames('SlimCounter', styles)}>
       <div className='content'>

@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-const copyURL = 'https://dy1ht16ivl5br.cloudfront.net/interactives/apps/kitchensink/17BywYWZeIoI/data.json';
-const dataURL = 'https://dy1ht16ivl5br.cloudfront.net/interactives/2020/covid-tracking-data/global-jhu.json';
+const copyURL = 'https://www.politico.com/interactives/apps/kitchensink/17BywYWZeIoI/data.json';
+const dataURL = 'https://www.politico.com/interactives/2020/covid-tracking-data/global-jhu.json';
 fetch(copyURL)
   .then(d => d.json())
   .then(copy => {
